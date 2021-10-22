@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz do zadań</title>
+</head>
+<body>
+    <form method="POST" action="{% url 'form2:list'%}">
+        {% csrf_token %}
+        <input type="text" name="task">
+        <input type="submit" value="Zarejestruj">
+    </form>
+</body>
+</html>

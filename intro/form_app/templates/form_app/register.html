@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zarejestruj zadanie</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="task">
+        <input type="submit" value="Zarejestruj">
+    </form>
+
+    {% for task in tasks %}
+        <ul>
+            <li>{{ task }}</li>
+        </ul>
+    {% endfor %}
+
+</body>
+</html>
